@@ -4,3 +4,8 @@ sylius_customer:
                 classes:
                     model: AppBundle\Entity\Customer
 
+sylius_order:
+    resources:
+        order:
+            classes:
+                controller: AppBundle\Controller\OrderController

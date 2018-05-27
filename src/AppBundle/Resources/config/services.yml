@@ -1,0 +1,4 @@
+services:
+   _instanceof:
+        Sylius\Bundle\ResourceBundle\Controller\ResourceController:
+            autowire: false
