@@ -22,18 +22,16 @@ class OrderController extends orderCont
     {
         //return parent::updateAction($request);
 
-        /*$user = $this->getUser()->getCustomer();
-        $user->setCustomerSolde($user->getCustomerSolde() - 1000);
+        //$user = $this->getUser()->getCustomer();
+        /*$user->setCustomerSolde($user->getCustomerSolde() - 1000);
         $em = $this->getDoctrine()->getManager();
         $em->persist($user);
-        $em->flush();
+        $em->flush(); */
 
-        die;*/
         $configuration = $this->requestConfigurationFactory->create($this->metadata, $request);
 
         $this->isGrantedOr403($configuration, ResourceActions::UPDATE);
         $resource = $this->findOr404($configuration);
-
 
         $form = $this->resourceFormFactory->create($configuration, $resource);
 
